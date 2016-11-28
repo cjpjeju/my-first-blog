@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>학생정보</title>
+</head>
+<body>
+<div>
+    <h1><a href="/">학생목록</a></h1>
+</div>
+{% for s in sno %}
+    <h2>번호: {{ s.id }}</h2>
+    <ul>
+    <li>이름 : <a href=""> {{ s.name }} </a></li>
+    <li>학과 :  {{ s.dept }} </li>
+    <li>학년 : {{ s.year }} </li>
+    <li>해당학점 : {{ s.gpa }} </li>
+    </ul>
+{% endfor %}
+</body>
+</html>

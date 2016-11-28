@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>방명록 목록</title>
+</head>
+<body>
+<h1>방명록 목록</h1>
+
+<p><table border=1 cellspacing=5 width=600>
+<tr><th>번호</th><th>제목</th><th><내용></th></tr>
+{% for oneitem in guest %}
+	<tr>
+		<td align=center> {{ forloop.counter }} </td>
+		<td> {{ oneitem.title }}</td>
+		<td> {{ oneitem.content }}</td>
+	</tr>
+{% endfor %}
+</table>
+<p><a href="/myguestbook">방명록 입력으로 돌아가기</a>
+<p><a href="/guestbook_delete">방명록 삭제하기</a></p>
+<p><a href="/guestbook_update">방명록 수정하기</a></p>
+</body>
+</html>

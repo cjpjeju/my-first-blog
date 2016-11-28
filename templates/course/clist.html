@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>과목목록</title>
+</head>
+<body>
+<div>
+    <h1><a href="/">과목목록</a></h1>
+</div>
+{% for c in cno %}
+    <h2>과목번호: {{ c.courseno }}</h2>
+    <ul>
+    <li>과목이름 : <a href=""> {{ c.coursename }} </a></li>
+    <li>소속학과 :  {{ c.deptname }} </li>
+    <li>해당학점 : {{ c.credit }} </li>
+    </ul>
+{% endfor %}
+
+</body>
+</html>
